@@ -150,6 +150,7 @@ header {
   }
 }
 .home {
+  background: #201728;
   max-width: 100%;
   height: 115vh;
   background-image: url("https://i.postimg.cc/Pfzct4Lv/header.jpg");
@@ -194,8 +195,9 @@ header {
 }
 .about {
   height: 100vh;
+  background: #201728;
   .box-center {
-    transform: translateY(-95px);
+    transform: translateY(-90px);
     width: 68%;
     height: 70vh;
     background: #6f249b;
@@ -204,7 +206,7 @@ header {
       padding: 68px 90px;
       color: #ffffff;
       text-align: center;
-      font-size: 50px;
+      font-size: 45px;
       a {
         font-size: 16px;
         display: flex;
@@ -221,11 +223,14 @@ header {
         &:hover {
           transition: 0.5s ease;
           background: #e01c5a;
-          font-weight: 600;
         }
+      }
+      .arrow-right {
+        transform: translate(80px, -25px);
       }
     }
     &:after {
+      transform: translateY(0.5px);
       border-color: transparent transparent #201728 transparent;
       border-style: solid;
       border-width: 0 0 7vw 80vw;
@@ -237,22 +242,88 @@ header {
       width: 0;
     }
   }
+  .arrow-glyph {
+    background: #201728;
+    margin: auto;
+    transform: translate(-50px, -50px);
+    width: 5px;
+    height: 60px;
+  }
 }
-.service-one {
-  height: 100vh;
-}
-.service-two {
-  height: 145vh;
-  background: #6f249b;
-}
-.cards {
-  padding: 80px 15px;
-  height: 68vh;
-  background: #ffffff;
-}
-.footer {
-  height: 32vh;
-  color: #201728;
+.advert {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 135vh;
+  .hex-gradient {
+    margin: auto;
+    width: 30%;
+    transform: translateX(-120px);
+  }
+  .image-one {
+    margin: auto;
+    width: 46.1%;
+    transform: translate(145px, -275px);
+  }
+  .glyph {
+    margin: auto;
+    width: 4%;
+    height: 242px;
+    transform: translate(345px, -730px);
+  }
+  .title {
+    margin: auto;
+    color: #fff;
+    font-size: 45px;
+    letter-spacing: 2px;
+    width: 45%;
+    transform: translate(-127px, -950px);
+    .heading {
+      font-weight: 100px;
+      z-index: 2;
+    }
+  }
+  .text {
+    margin: auto;
+    width: 22%;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.4rem;
+    transform: translateX(-287px) translateY(-930px);
+    p {
+      a {
+        font-size: 12px;
+        display: flex;
+        color: #fff;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        height: 38px;
+        width: 145px;
+        border: 2px solid #e01c5a;
+        transform: translate(-60px, 36px);
+        font-family: sans-serif;
+        &:hover {
+          transition: 0.5s ease;
+          background: #e01c5a;
+        }
+      }
+      .arrow-right {
+        margin: auto;
+        width: 45px;
+        height: 16px;
+        transform: translate(130px, 8px);
+      }
+    }
+  }
+  .arrow-glyph2 {
+    margin: auto;
+    max-width: 2%;
+    max-height: 20%;
+    transform: translateX(-260px) translateY(-460px);
+  }
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -378,53 +449,3 @@ header {
     }
   }
 }
-
-/* iPhone 4 ----------- */
-// @media only screen and (min-device-pixel-ratio: 1.5) {
-//   header {
-//     .ham-burger {
-//       span {
-//         margin-bottom: 4px;
-//         width: 20px;
-//         &:nth-child(1) {
-//           transform-origin: left top;
-//         }
-//         &:nth-child(2) {
-//           opacity: left right;
-//         }
-//         &:nth-child(3) {
-//           transform-origin: left bottom;
-//         }
-//       }
-//       &.active {
-//         span {
-//           &:nth-child(1) {
-//             -webkit-transform: rotate(45deg) translateY(-1.5px);
-//             transform: rotate(45deg) translateY(-1.5px);
-//           }
-//           &:nth-child(2) {
-//             opacity: 0;
-//           }
-//           &:nth-child(3) {
-//             -webkit-transform: rotate(-45deg) translateY(1.5px);
-//             transform: rotate(-45deg) translateY(1.5px);
-//           }
-//         }
-//       }
-//     }
-//   }
-//   .container {
-//     .main-logo {
-//       height: 40px;
-//     }
-//   }
-//   .home {
-//     .scroll {
-//       bottom: 100px;
-//       .icon {
-//         width: 10px;
-//         height: 25px;
-//       }
-//     }
-//   }
-// }

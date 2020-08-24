@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>King James Digital</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./animate.css" />
+    <style>
+      .wow:first-child {
+        visibility: hidden;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -21,24 +27,22 @@
           <ul>
             <li><a class="nav-link" href="#home">Home</a></li>
             <li><a class="nav-link" href="#about">About</a></li>
-            <li><a class="nav-link" href="#communications">Advert</a></li>
+            <li><a class="nav-link" href="#advert">Advert</a></li>
             <li><a class="nav-link" href="#data">Data</a></li>
             <li><a class="nav-link" href="#news">Cards</a></li>
           </ul>
         </div>
       </div>
     </header>
-    <section class="home" id="home">
-      <div class="container">
-        <a href="index.html">
-          <img
-            class="main-logo"
-            src="https://i.postimg.cc/x1DSsP4s/kjd-logo.png"
-            alt="logo"
-          />
-        </a>
+    <section class="home wow flash" id="home">
+      <div class="container wow bounceInDown">
+        <img
+          class="main-logo"
+          src="https://i.postimg.cc/x1DSsP4s/kjd-logo.png"
+          alt="logo"
+        />
       </div>
-      <a href="#about" class="scroll">
+      <a href="#about" class="scroll wow bounceInUp">
         <img
           class="icon"
           src="https://i.postimg.cc/2SRV4hFY/arrow-down.png"
@@ -48,15 +52,72 @@
     </section>
     <section class="about">
       <div class="box-center" id="about">
-        <p>
+        <p class="wow slideInLeft">
           We offer an interconnected set of services to help our clients respond
           to the disruptions and seize the oppertunities if the digital age.
 
-          <a href="#about"><span class="text">ABOUT US</span></a>
+          <a href="#about"><span class="text">ABOUT US</span></a
+          ><img
+            class="arrow-right"
+            src="https://i.postimg.cc/NFFZjDSW/arrow-right.png"
+            alt="arrow"
+          />
         </p>
       </div>
-      <!-- <img src="" alt="symbol" /> -->
+      <div class="arrow-glyph">
+        <img
+          src="https://i.postimg.cc/Yqd9DY44/not-arrow-glyph.png"
+          alt="arrow"
+        />
+      </div>
+    </section>
+    <section class="advert wow slideInRight" id="advert">
+      <img
+        class="hex-gradient"
+        src="https://i.postimg.cc/9fBkPsj6/hex-gradient.png"
+        alt="hex"
+      />
+      <img
+        class="image-one"
+        src="https://i.postimg.cc/LX6bxv9n/image-slider-1.jpg"
+        alt="slider"
+      />
+      <img
+        class="glyph"
+        src="https://i.postimg.cc/sDtb3pcN/glyph.png"
+        alt="glyph"
+      />
+      <img
+        class="arrow-glyph2"
+        src="https://i.postimg.cc/VLS3y7jt/arrow-glyph.png"
+        alt="arrow-gylph"
+      />
+      <div class="title">
+        <p class="heading">Advertising communications</p>
+      </div>
+      <div class="text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+          <a href="#about"><span class="read-more">READ MORE</span></a>
+          <img
+            class="arrow-right"
+            src="https://i.postimg.cc/NFFZjDSW/arrow-right.png"
+            alt="arrow-right"
+          />
+        </p>
+      </div>
     </section>
     <script src="./script.js"></script>
+    <script src="./wow.min.js"></script>
+    <script>
+      wow = new WOW({
+        animateClass: "animated",
+        offset: 0,
+      });
+      wow.init();
+    </script>
   </body>
 </html>
